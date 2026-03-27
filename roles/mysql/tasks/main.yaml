@@ -1,13 +1,13 @@
-- name: MySQL configuration
-  hosts: mysql
-  become: yes
-  vars:
-    mysql_root_password: ExpenseApp@1
-    login_host: mysql.jioairlines.online
-    backend_host: backend.jioairlines.online
+# - name: MySQL configuration
+#   hosts: mysql
+#   become: yes
+#   vars:
+#     mysql_root_password: ExpenseApp@1
+#     login_host: mysql.jioairlines.online
+#     backend_host: backend.jioairlines.online
 
-  tasks:
-    - name: Install pip3
+  
+    - name: Ansible to Install pip3
       ansible.builtin.package:
         name: python3-pip
         state: present
