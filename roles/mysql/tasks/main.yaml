@@ -22,7 +22,7 @@
     - name: Setup MySQL root user restricted to backend
       community.mysql.mysql_user:
         name: root
-        host: "{{ backend_host }}"
+        host: "10.0.11.%"       #host: "{{ backend_host }}"
         password: "{{ mysql_root_password }}"
         priv: "*.*:ALL,GRANT"
         state: present
